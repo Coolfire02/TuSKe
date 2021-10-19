@@ -36,7 +36,7 @@ public class ExprPlayerVersion extends SimplePropertyExpression<Player, String>{
 	static {
 		JavaPlugin viaversion = (JavaPlugin) Bukkit.getServer().getPluginManager().getPlugin("ViaVersion");
 		if (viaversion != null) {
-			if (ReflectionUtils.hasMethod(ViaVersionPlugin.class, "getApi")) {
+			if (ReflectionUtils.hasMethod(Via.class, "getApi")) {
 				hasViaVersion = true;
 				api = ((ViaVersionPlugin) viaversion).getApi();
 			} else
